@@ -44,10 +44,12 @@ Please make sure to update tests as whenever appropriate.
   Encryption is solely depend on the text file. Upon Decryption, MessageBox will display the payload text.
  
  For image payload:
-  Encryption is based on image file. Upon Decryption, the image payload will be saved to local directory.
+  Encryption is based on image file. Stego Image file will be saved as `finalstego.png`
  
+  Upon Decryption, the image payload will be saved to local directory. Recovered Stego Image file will be saved as `RecoveredHiddenImage.png`
+  
 ## Notes
-All the images used are non-directory "images" and the forms removed and modified from the site [Pexels](https://www.pexels.com/public-domain-images/), being transformed into `.png` and reduced or size for simpler tests. The links of each individual image are saved in the ImagesLinks.txt file.
+All the images used are non-directory "images" and the forms removed and modified from the site [Pexels](https://www.pexels.com/public-domain-images/), being transformed into `.png` and reduced or size for simpler tests.
 
 The main methods used are: read, save and manipulate the images using the imageio and numpy python libraries; transform imagem from Pure Binary Code to Canonical Gray Code and vice-versa; Check if a block of a bit plane is considered complex.
 
