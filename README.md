@@ -7,11 +7,11 @@ The aim of the project is to utilize and implement the BPCS method of steganogra
 ## Example
 
 
-# Tkinter
+## Tkinter
 
 Tkinter is Python's de-fecto standard GUI toolkit.
 
-# Prerequisites
+## Prerequisites
  1. Numpy
  2. Imageio
  3. OpenCV
