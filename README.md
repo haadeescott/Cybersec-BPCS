@@ -32,8 +32,9 @@ In this case, your requirement file contains a pinned version of everything that
  ```
 Please make sure to update tests as whenever appropriate.
 
-## Usage
+## Features
  - Upon running `GUI_BPCS.py`, 
+ 
  ![image](https://user-images.githubusercontent.com/50063565/94983687-b7554d00-0577-11eb-825b-fa4a2207d211.png)
  
  Payload type options: Text(in `.txt`) / Images (in `.png`)
