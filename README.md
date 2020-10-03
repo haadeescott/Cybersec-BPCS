@@ -4,7 +4,8 @@ It conceals the payload(secret data) from plain sight in the form of text/image 
 
 The aim of the project is to utilize and implement the BPCS method of steganography, which in this case, will serve to hide an image in another(encode) and to be recovered(decode). This method consists in hiding pixels from the image in blocks of a bit plane whose bits are from. If the image possess a noisy behavior, it takes advantage of the characteristic of human vision to concentrate not to reconcile patterns and shapes. Hence, for a 'normal' image, roughly 50% of the data might be replaceable with secret data before image degradation becomes apparent.
 
-## Example
+## Demo
+![Demo_image](https://user-images.githubusercontent.com/50063565/94983567-87f21080-0576-11eb-914b-877b7cc7657b.gif)
 
 
 ## Tkinter
