@@ -49,7 +49,7 @@ Please make sure to update tests as whenever appropriate.
    Encryption is based on image file. Stego Image file will be saved as `finalstego.png`
    Upon Decryption, the image payload will be saved to local directory. Recovered Stego Image file will be saved as `RecoveredHiddenImage.png`
    
-###### Summary For Image payload processing ######
+###### Summary For Image payload processing 
 Upon selection of image from ‘<select>’ button, image will be compressed into a 200 x 300 dimension and previewed in the image panel of the GUI. Due to this, images above 1500 x 1500 will either cause the program to Not Respond or the program will not load the image entirely. This applies to both the vessel and target image selection. The purpose of this program is to embed an image payload into a cover/vessel image. Hence, by design, the image payload should be smaller than the vessel image. Preferably, below 500 x 500 px to allow smoother and faster conjugation. We convert the data in binary form to respective gray code, (**CGC**) so that the complexity for detecting the information in image increases. Once a complex plane is found inside the the vessel image, program inserts bit (target image) into the said plane and continues the loop of iteration of the vessel image plane. Upon insertion, the conjugation method is called to mark the area that has been conjugated. Once conjugation is complete, program transforms image back to **PBC**, pure binary code, from **CGC**.
      
 ## Notes
