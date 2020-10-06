@@ -49,34 +49,9 @@ Please make sure to update tests as whenever appropriate.
    Encryption is based on image file. Stego Image file will be saved as `finalstego.png`
    Upon Decryption, the image payload will be saved to local directory. Recovered Stego Image file will be saved as `RecoveredHiddenImage.png`
    
- *Summary for Image payload:*
- 
-1.	Upon selection of image from ‘<select>’ button, image will be compressed into a 200 x 300        dimension and previewed in the image panel of the GUI
-2.	Dimensions and size of the original vessel image will be shown in the GUI as well
-3.	Same concept goes to the selection of the target Image
-   a.	If both target and vessel image does not pop up inside the image panel, restart your             program, or select a different image
-      i.	This is due to the fact that the image is too big to be compressed into the 200 x 300            format
-4.	Embedding of the image goes like this:
-   a.	Vessel image will be converted into PBC (Pure Binary Code) 
-   b.	Then it will be converted into CGC (Cannonical Gray Code)
-   c.	This makes the insertion of the BPCS planes less intrusive
-   d.	Image will be iterated through
-      i.	Separates the image, bit plane wise 
-      ii.	Iterates each plane and for each complex plane located, it breaks the loop
-   e.	Meanwhile, target image is transformed into CGC as well and separated into 8 bit planes
-   f.	Once a complex plane is found inside the the vessel image, program inserts bit (target           image) into the said plane and continues the loop of iteration of the vessel image plane
-   g.	Upon insertion, the conjugation method is called to mark the area that has been conjugated
-   h.	Each bit of the conjugation map represents a target image block
-   i.	Once conjugation is complete, program transforms image back to PBC from CGC
-5.	Recovery of hidden image goes like this:
-   a.	Program transforms vessel image to CGC from PBC
-   b.	Iteration is executed to loop through the vessel image planes
-   c.	Program checks whether a target shape exists
-   d.	If exists, conjugation map is printed out from the bits located inside the complex planes       and recovered
-   e.	Bits are reassembled and recovered into an Image named `RecoveredHiddenImage.png`
-
-   
-  
+###### Summary For Image payload processing ######
+Upon selection of image from ‘<select>’ button, image will be compressed into a 200 x 300 dimension and previewed in the image panel of the GUI. Due to this, images above 1500 x 1500 will either cause the program to Not Respond or the program will not load the image entirely. This applies to both the vessel and target image selection. The purpose of this program is to embed an image payload into a cover/vessel image. Hence, by design, the image payload should be smaller than the vessel image. Preferably, below 500 x 500 px to allow smoother and faster conjugation. We convert the data in binary form to respective gray code, (**CGC**) so that the complexity for detecting the information in image increases. Once a complex plane is found inside the the vessel image, program inserts bit (target image) into the said plane and continues the loop of iteration of the vessel image plane. Upon insertion, the conjugation method is called to mark the area that has been conjugated. Once conjugation is complete, program transforms image back to **PBC**, pure binary code, from **CGC**.
+     
 ## Notes
 All the images used are non-directory "images" and the forms removed and modified from the site [Pexels](https://www.pexels.com/public-domain-images/), being transformed into `.png` and reduced or size for simpler tests.
 
